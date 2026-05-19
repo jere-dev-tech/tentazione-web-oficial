@@ -1,0 +1,72 @@
+/**
+ * Marca TENTAZIONE (header) — alineado a index raíz: h1 + .luminance en PROYECTO/CSSestilos/styles.css
+ * Sin chip/caja; el template fija ancho de .header-logo para imágenes → se anula solo con .tentazione-header-logo.
+ */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+/* Misma especificidad que app.css para ganar al ancho pensado para logos con <img> */
+header .header-section .header-top .header-logo.tentazione-header-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  max-width: min(92vw, 520px);
+  min-width: 0;
+  text-decoration: none !important;
+}
+
+header .header-section .header-top .header-logo.tentazione-header-logo .tentazione-brand-title {
+  margin: 0;
+  padding: 0;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  /* Raíz: text-[28px] ≈ 28px; un poco más grande en pantallas amplias, legible en mobile */
+  font-size: clamp(24px, 6.5vw, 34px);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+/* Misma lógica que .luminance en la raíz; @keyframes con prefijo para no chocar */
+header .header-section .header-top .header-logo.tentazione-header-logo .tentazione-luminance {
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: tentazione-luminance-reveal 3s ease-in-out forwards 200ms,
+    tentazione-luminance-glow 2.5s linear infinite 2s;
+  cursor: pointer;
+}
+
+@keyframes tentazione-luminance-reveal {
+  80% {
+    letter-spacing: 8px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@keyframes tentazione-luminance-glow {
+  40% {
+    text-shadow: 0 0 8px #fff;
+  }
+}
+
+@keyframes tentazione-luminance-reveal-tight {
+  80% {
+    letter-spacing: 3px;
+  }
+  100% {
+    background-size: 300% 300%;
+  }
+}
+
+@media (max-width: 400px) {
+  header .header-section .header-top .header-logo.tentazione-header-logo .tentazione-luminance {
+    animation: tentazione-luminance-reveal-tight 3s ease-in-out forwards 200ms,
+      tentazione-luminance-glow 2.5s linear infinite 2s;
+  }
+}

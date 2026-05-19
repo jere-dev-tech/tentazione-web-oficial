@@ -1,0 +1,12 @@
+.about-sec{
+    background: url(../media/about/about-bg.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    .about-image-container{
+        img{
+            @media (min-width: 2199px) {
+                width: 80%;
+            }
+        }
+    }
+}

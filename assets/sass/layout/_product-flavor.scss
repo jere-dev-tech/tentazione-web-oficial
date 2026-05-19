@@ -1,0 +1,59 @@
+.product-flavor-sec{
+    background: url('../media/banner/special-product-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    .flavor-wrapper{
+        position: relative;
+        .product-flavor-slider{
+            margin: 0 96px;
+            .product-image-slide{
+                display: flex;
+                justify-content: center;
+                img{
+                    @media (min-width: 2199px) {
+                        width: 40%;
+                    }
+                }
+            }
+        }
+        .slider-arrows{
+            justify-content: space-between;
+            .arrow-btn{
+                position: absolute;
+                width: clamp(48px, 3.33vw, 120px);
+                height: clamp(48px, 3.33vw, 120px);
+                border-radius: 50%;
+                background: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: $transition;
+                border: 0;
+                svg{
+                    path{
+                        transition: $transition;
+                    }
+                }
+
+                &.btn-prev{
+                    top: 50%;
+                    left: 48px;
+                    transform: translate(-50%, -50%);
+                }
+                &.btn-next{
+                    top: 50%;
+                    right: 0;
+                    transform: translate(-50%, -50%);
+                }
+                &:hover{
+                    background: $accent-1   ;
+                    svg{
+                        path{
+                            fill: $white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

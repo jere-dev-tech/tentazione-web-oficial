@@ -1,0 +1,51 @@
+.collection-sec {
+    .collection-card {
+        text-align: center;
+        .order-box {
+            position: relative;
+            padding-right: clamp(32px, 3.125vw, 120px);
+            @include media-query(576px){
+                padding-right: 0;
+            }
+            .icon-image {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-108%, -50%);
+                @include media-query(1099px){
+                    transform: translate(-90%, -50%);
+                }
+                @include media-query(575px){
+                    transform: translate(-70%, -50%);
+                }
+            }
+        }
+
+        .collection-text {
+            padding: 0 clamp(10px, 0.833vw, 32px);
+            width: 80%;
+            @include media-query(576px){
+                width: auto;
+            }   
+            .h5{
+                color: $medium-black;
+                transition: $transition;
+            }
+            .block-btn{
+                color: $accent-1;
+                transition: $transition;
+                font-family: $font-sec;
+                &:hover{
+                    color: $medium-black;
+                }
+            }
+        }
+        &:hover {
+            .collection-text {
+                .h5{
+                    color: $accent-1;
+                }
+            }
+        }
+    }
+}

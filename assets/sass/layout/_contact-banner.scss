@@ -1,0 +1,46 @@
+.contact-banner {
+    background: url(../media/banner/inner-banner-bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    .contact-content-block {
+        .highlighted-text {
+            position: relative;
+
+            .text-line {
+                position: absolute;
+                bottom: -50%;
+                left: 0;
+            }
+        }
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                gap: $gap-8;
+
+                .check-circle {
+                    width: clamp(16px, 1.25vw, 48px);
+                    height: clamp(16px, 1.25vw, 48px);
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    svg {
+                        width: clamp(12px, 0.833vw, 48px);
+                        height: clamp(8px, 0.625vw, 36px);
+                    }
+                }
+            }
+        }
+    }
+    .contact-image{
+        img{
+            @media (min-width: 2199px) {
+                width: 80%;
+            }
+        }
+    }
+}
