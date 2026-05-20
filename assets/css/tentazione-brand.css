@@ -79,3 +79,302 @@ footer .tentazione-brand-title,
       tentazione-luminance-glow 2.5s linear infinite 2s;
   }
 }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.22s ease, box-shadow 0.22s ease;
+}
+
+header.bg-black {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.title-banner {
+  background-image: linear-gradient(90deg, rgba(255, 248, 238, 0.84) 0%, rgba(255, 248, 238, 0.48) 42%, rgba(255, 248, 238, 0.12) 100%), url("../media/banner/hero-banner-tentazione.jpg") !important;
+  background-position: center center;
+  background-size: cover;
+}
+
+header .header-section .header-center .header-hotline.tentazione-offer-marquee {
+  flex: 1 1 clamp(520px, 50vw, 1120px);
+  max-width: clamp(520px, 50vw, 1120px);
+  overflow: hidden;
+}
+
+header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__viewport {
+  overflow: hidden !important;
+  width: 100%;
+  max-width: 100%;
+  mask-image: linear-gradient(90deg, transparent 0, #000 22px, #000 calc(100% - 22px), transparent 100%);
+}
+
+header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__track {
+  display: flex !important;
+  align-items: center;
+  width: max-content !important;
+  min-width: max-content !important;
+  animation: tentazione-offer-marquee-scroll 30s linear infinite !important;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__segment,
+header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__segment[aria-hidden="true"] {
+  display: inline-flex !important;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: clamp(18px, 3vw, 42px);
+  padding-right: clamp(48px, 6vw, 96px);
+  white-space: nowrap;
+}
+
+header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__text {
+  white-space: nowrap;
+}
+
+.shop-section .search-bar-container,
+.shop-section .tentazione-search-disabled,
+.toggle-sidebar .search-bar-container {
+  display: none !important;
+}
+
+.tentazione-product-card .detail-img {
+  overflow: hidden;
+  border-radius: 8px;
+  background: #f6f1e8;
+}
+
+.tentazione-product-card .detail-img-block {
+  display: block;
+  aspect-ratio: 1 / 1;
+}
+
+.tentazione-product-card .detail-img-block img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.tentazione-product-card .side-icons a.is-active,
+.tentazione-product-card .side-icons a:hover {
+  color: #c58b46;
+}
+
+.tentazione-filter-list {
+  display: grid;
+  gap: 12px;
+}
+
+.tentazione-filter-chip {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #363636;
+  cursor: pointer;
+}
+
+.tentazione-filter-chip input {
+  accent-color: #c58b46;
+}
+
+.toggle-sidebar .box-1 {
+  display: none !important;
+}
+
+.shop-section .wrapper-dropdown {
+  min-width: 170px;
+}
+
+.tentazione-tag-filter {
+  border: 0;
+  cursor: pointer;
+}
+
+.tentazione-tag-filter.is-active,
+.tentazione-tag-filter:hover {
+  background: #c96f48;
+  color: #fff;
+}
+
+#border-pagination a.is-disabled {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.tentazione-count-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 999px;
+  background: #c96f48;
+  color: #fff;
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: 700;
+}
+
+header .cart-button,
+header a[href*="wishlist"] {
+  position: relative;
+}
+
+.tentazione-footer-logo {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: min(150px, 40vw);
+  min-height: 90px;
+}
+
+.tentazione-footer-logo img {
+  display: block;
+  width: 112px;
+  max-width: 100%;
+  height: auto;
+  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.32));
+}
+
+.tentazione-ecommerce-panel {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  padding: clamp(22px, 4vw, 40px);
+  border: 1px solid rgba(54, 54, 54, 0.08);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.tentazione-cart-table {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.tentazione-cart-row {
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr) auto auto auto;
+  align-items: center;
+  gap: 18px;
+  padding: 14px;
+  border: 1px solid rgba(54, 54, 54, 0.08);
+  border-radius: 8px;
+  background: #fbf7ef;
+}
+
+.tentazione-cart-row img {
+  width: 92px;
+  height: 92px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.tentazione-cart-total {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 22px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(54, 54, 54, 0.12);
+  font-size: 20px;
+}
+
+.tentazione-qty-control {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(54, 54, 54, 0.16);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tentazione-qty-control button,
+.tentazione-qty-control input {
+  width: 34px;
+  height: 34px;
+  border: 0;
+  background: transparent;
+  text-align: center;
+  font-weight: 700;
+  color: #363636;
+}
+
+.tentazione-qty-control input {
+  width: 38px;
+  border-inline: 1px solid rgba(54, 54, 54, 0.12);
+}
+
+.tentazione-remove-btn {
+  border: 0;
+  background: transparent;
+  color: #c96f48;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+#sidebar-cart .tentazione-qty-control {
+  margin-top: 8px;
+}
+
+@media (max-width: 767px) {
+  .shop-section .d-flex.align-items-center.justify-content-end {
+    justify-content: flex-start !important;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+
+  .shop-section .wrapper-dropdown {
+    min-width: min(190px, 52vw);
+  }
+
+  .shop-section .tentazione-product-col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__track {
+    animation-duration: 17s !important;
+  }
+
+  .tentazione-cart-row {
+    grid-template-columns: 76px minmax(0, 1fr);
+  }
+
+  .tentazione-cart-row img {
+    width: 76px;
+    height: 76px;
+  }
+
+  .tentazione-cart-row span,
+  .tentazione-cart-row strong,
+  .tentazione-cart-row .tentazione-qty-control,
+  .tentazione-cart-row .tentazione-remove-btn {
+    grid-column: 2;
+    justify-self: start;
+  }
+}
+
+@media (max-width: 575px) {
+  header .header-section .header-center .header-hotline.tentazione-offer-marquee {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  header .header-section .header-center .header-hotline.tentazione-offer-marquee {
+    flex-basis: min(58vw, 1280px);
+    max-width: min(58vw, 1280px);
+  }
+
+  header .header-section .header-center .header-hotline.tentazione-offer-marquee .tentazione-offer-marquee__track {
+    animation-duration: 36s !important;
+  }
+}

@@ -1,18 +1,13 @@
-@keyframes heroBgZoom {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.22);
-    }
-}
-
 .hero-banner {
+    --hero-desktop-height: clamp(450px, 45.313vw, 1560px);
+    --hero-mobile-height: clamp(640px, 82svh, 688px);
+    --hero-media-position-desktop: center center;
+    --hero-media-position-mobile: 56% center;
+
     position: relative;
     overflow: hidden;
     background: none;
-    height: clamp(450px, 45.313vw, 1560px);
+    height: var(--hero-desktop-height);
     display: grid;
     align-items: center;
 
@@ -21,12 +16,34 @@
         position: absolute;
         inset: 0;
         z-index: 0;
-        background: url(../media/banner/hero-bg.png) no-repeat center center;
+        background: url(../media/banner/hero-banner-tentazione.jpg) no-repeat center center;
         background-size: cover;
-        transform: scale(1);
-        transform-origin: center center;
-        animation: heroBgZoom 12s ease-in-out infinite alternate;
-        will-change: transform;
+    }
+
+    &.hero-banner--media::before {
+        background: none;
+    }
+
+    .hero-banner__media {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        overflow: hidden;
+        pointer-events: none;
+
+        picture,
+        img,
+        video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        img,
+        video {
+            object-fit: cover;
+            object-position: var(--hero-media-position-desktop);
+        }
     }
 
     &::after {
@@ -50,11 +67,18 @@
     }
 
     @include media-query(575px) {
-        height: 750px;
+        height: var(--hero-mobile-height);
         align-items: flex-start;
 
         &::before {
-            background-image: url(../media/banner/hero-bg-mobile.png);
+            background-image: url(../media/banner/hero-banner-tentazione.jpg);
+        }
+
+        .hero-banner__media {
+            img,
+            video {
+                object-position: var(--hero-media-position-mobile);
+            }
         }
 
         &::after {
@@ -71,6 +95,7 @@
     .hero-content-block {
         @include media-query(575px) {
             padding-top: 35%;
+            max-width: 100%;
         }
 
         h1,
@@ -79,6 +104,12 @@
             text-shadow:
                 0 1px 2px rgba(0, 0, 0, 0.85),
                 0 2px 24px rgba(0, 0, 0, 0.45);
+
+            @include media-query(575px) {
+                max-width: 340px;
+                font-size: clamp(26px, 7.1vw, 30px);
+                line-height: 1.18;
+            }
         }
 
         p {
@@ -86,15 +117,40 @@
             text-shadow:
                 0 1px 2px rgba(0, 0, 0, 0.8),
                 0 1px 12px rgba(0, 0, 0, 0.4);
+
+            @include media-query(575px) {
+                max-width: 345px;
+            }
         }
 
         .cus-btn-2 {
             color: $white !important;
             text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+            min-width: 235px;
+
+            .circle {
+                width: 100%;
+                height: 100%;
+                border-radius: inherit;
+                transform: translate(-50%, -50%) scaleX(0);
+                transform-origin: center center;
+                opacity: 1;
+            }
+
+            .text {
+                color: $white !important;
+                white-space: nowrap;
+            }
 
             &:hover,
             &:focus {
                 color: $white !important;
+
+                .circle {
+                    width: 100%;
+                    height: 100%;
+                    transform: translate(-50%, -50%) scaleX(1.04);
+                }
 
                 svg path {
                     stroke: $white !important;

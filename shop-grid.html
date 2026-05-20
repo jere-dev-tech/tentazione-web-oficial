@@ -15,7 +15,10 @@
     <title>Productos | Tentazione Alfajores premium</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="assets/media/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/media/favicon-32x32.png?v=tentazione-20260520">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/media/favicon-16x16.png?v=tentazione-20260520">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/media/apple-touch-icon.png?v=tentazione-20260520">
+    <link rel="shortcut icon" href="assets/media/favicon.png?v=tentazione-20260520">
 
     <!-- All CSS files -->
     <link rel="stylesheet" href="assets/css/vendor/font-awesome.css">
@@ -167,15 +170,14 @@
                                 <p class="dark-gray">Ordenar por:</p>
                                 <div class="drop-container">
                                     <div class="wrapper-dropdown" id="dropdown8">
-                                        <span class="selected-display" id="destination8">mayor precio</span>
+                                        <span class="selected-display" id="destination8">Menor precio</span>
                                         <svg id="drp-arrow8" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="arrow transition-all ml-auto rotate-180">
                                             <path d="M7 14.5l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                                         </svg>
                                         <ul class="topbar-dropdown bg-lightest-gray">
-                                            <li class="item dark-black">mayor precio</li>
-                                            <li class="item dark-black">menor precio</li>
-                                            <li class="item dark-black">mayor precio</li>
-                                            <li class="item dark-black">promociones</li>
+                                            <li class="item dark-black" data-sort="price-asc">Menor precio</li>
+                                            <li class="item dark-black" data-sort="price-desc">Mayor precio</li>
+                                            <li class="item dark-black" data-sort="promo">Promociones</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -1249,7 +1251,7 @@
                     <div class="cus-checkBox">
                         <input type="checkbox" id="inStock" class="inp-cbx">
                         <label for="inStock" class="cbx">
-                            In Stock
+                            Disponible
                         </label>
                     </div>
                     <p>(05)</p>
@@ -1258,7 +1260,7 @@
                     <div class="cus-checkBox">
                         <input type="checkbox" id="outStock" class="inp-cbx">
                         <label for="outStock" class="cbx">
-                            Out Stock
+                            Agotado
                         </label>
                     </div>
                     <p>(08)</p>
@@ -1268,7 +1270,7 @@
         <div class="hr-line mb-24"></div>
         <div class="category-block box-5 wow fadeInUp animated mb-32 animated" data-wow-delay="200ms">
             <div class="title mb-24" data-count="5">
-                <h6 class="fw-500 medium-black">Filter By Price</h6>
+                <h6 class="fw-500 medium-black">Filtrar por precio</h6>
                 <span>
                     <i class="fa-light fa-chevron-up"></i>
                 </span>
@@ -1277,14 +1279,14 @@
                 <div class="wrapper">
                     <div class="price-input mb-24">
                         <div class="field">
-                            <div class="medium-black mb-4p">From</div>
+                            <div class="medium-black mb-4p">Desde</div>
                             <div class="sidebar-price-block">
                                 <p class="price-sign">$</p>
                                 <input type="number" class="input-min dark-gray" value="2500">
                             </div>
                         </div>
                         <div class="field">
-                            <div class="medium-black mb-4p">To</div>
+                            <div class="medium-black mb-4p">Hasta</div>
                             <div class="sidebar-price-block">
                                 <p class="price-sign">$</p>
                                 <input type="number" class="input-max dark-gray" value="7500">
@@ -1314,7 +1316,7 @@
                     <div class="cus-checkBox">
                         <input type="checkbox" id="velvetBliss" class="inp-cbx">
                         <label for="velvetBliss" class="cbx">
-                            Velvet Bliss Cake
+                            Alfajores
                         </label>
                     </div>
                     <p>(05)</p>
@@ -1341,7 +1343,7 @@
                     <div class="cus-checkBox">
                         <input type="checkbox" id="smallAnimals" class="inp-cbx">
                         <label for="smallAnimals" class="cbx">
-                            Small Animals
+                            Gourmet
                         </label>
                     </div>
                     <p>(12)</p>
@@ -1383,19 +1385,19 @@
                         <p>Cake</p>
                     </a>
                     <a href="blog-grid.html" class="tag">
-                        <p>Vanilla Pastries</p>
+                        <p>Frutos rojos</p>
                     </a>
                     <a href="blog-grid.html" class="tag">
                         <p>Pastries</p>
                     </a>
                     <a href="blog-grid.html" class="tag">
-                        <p>Chocolate Cake</p>
+                        <p>Chocolate</p>
                     </a>
                     <a href="blog-grid.html" class="tag">
-                        <p>Sweet Cup Cake</p>
+                        <p>Dulce de leche</p>
                     </a>
                     <a href="blog-grid.html" class="tag">
-                        <p>Ice Cream</p>
+                        <p>Budines</p>
                     </a>
                 </div>
             </div>
@@ -1422,9 +1424,9 @@
                                  <div class="product-text-container bg-white br-20">
                                      <div class="close-content text-end">
                                          <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                             aria-label="Close"></button>
+                                             aria-label="Cerrar"></button>
                                      </div>
-                                     <h4 class="medium-black mb-16">Elysian Blend </h4>
+                                     <h4 class="medium-black mb-16">Alfajor Clásico Negro</h4>
                                      <div class="d-flex align-items-center flex-wrap gap-8 mb-16">
                                          <h6 class="color-star">★★★★★</h6>
                                          <p class="dark-gray subtitle">(02 Reseñas de clientes) </p>
@@ -1436,10 +1438,9 @@
                                          </div>
                                      </div>
                                      <p class="mb-24">
-                                         The Clean Wave Washing Machine Automatic Washing Machine is engineered to make laundry effortless with its advanced
-                                         cleaning technology. Featuring multiple wash cycles, water level sensors, and a quiet motor...
+                                         Alfajor artesanal Tentazione con relleno generoso, cobertura cuidada y sabor gourmet para pedidos especiales.
                                      </p>
-                                     <p class="subtitle color-primary mb-24">40 in stock, ready to ship</p>
+                                     <p class="subtitle color-primary mb-24">Disponible para pedidos</p>
                                      <div class="function-bar mb-24">
                                          <div class="quantity quantity-wrap">
                                              <div class="input-area quantity-wrap">
@@ -1492,7 +1493,7 @@
                     <div class="modal-body">
                         <div class="zui-wrapper">
                             <div class="close-content text-end">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
                             </div>
                             <div id="container" class="zui-scroller">
                                 <table class="zui-table">
