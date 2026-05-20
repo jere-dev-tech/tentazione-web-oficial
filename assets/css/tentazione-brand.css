@@ -230,16 +230,17 @@ header a[href*="wishlist"] {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  width: min(150px, 40vw);
-  min-height: 90px;
+  width: min(118px, 31vw);
+  min-height: 0;
 }
 
 .tentazione-footer-logo img {
   display: block;
-  width: 112px;
+  width: clamp(76px, 6vw, 104px);
   max-width: 100%;
-  height: auto;
-  filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.32));
+  height: clamp(76px, 6vw, 104px);
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(53, 24, 18, 0.2));
 }
 
 .tentazione-ecommerce-panel {
