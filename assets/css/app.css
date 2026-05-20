@@ -5293,7 +5293,7 @@ header .header-section .header-top .our-number p {
   min-width: max-content;
   align-items: center;
   white-space: nowrap;
-  animation: tentazione-offer-marquee-scroll 18s linear infinite;
+  animation: tentazione-offer-marquee-scroll 28s linear infinite;
   will-change: transform;
 }
 
@@ -5367,7 +5367,7 @@ header .header-section .header-top .our-number p {
   }
 
   .marquesina-promocional .tentazione-offer-marquee__track {
-    animation-duration: 13s;
+    animation-duration: 24s;
   }
 
   .marquesina-promocional .tentazione-offer-marquee__segment {
@@ -5377,7 +5377,7 @@ header .header-section .header-top .our-number p {
 
 @media (max-width: 575.98px) {
   .marquesina-promocional .tentazione-offer-marquee__track {
-    animation-duration: 11s;
+    animation-duration: 22s;
   }
 
   .marquesina-promocional .tentazione-offer-marquee__text {
